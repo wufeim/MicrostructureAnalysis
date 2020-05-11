@@ -13,3 +13,6 @@ SOURCES += \
 HEADERS += \
     featuredialog.h \
     window.h
+
+DISTFILES += \
+    README.md

@@ -3,6 +3,8 @@
 
 #include <QWidget>
 
+#include "featuredialog.h"
+
 QT_BEGIN_NAMESPACE
 class QGroupBox;
 QT_END_NAMESPACE
@@ -14,9 +16,14 @@ class Window : public QWidget
 public:
     Window(QWidget *parent = nullptr);
 
+private slots:
+    void featuresButtonClicked();
+
 private:
     QGroupBox *createFunctionGroup();
-    QGroupBox *createAboutGroup();
+    QGroupBox *createInfoGroup();
+
+    FeatureDialog *featureDialog;
 };
 
 #endif // WINDOW_H
